@@ -57,7 +57,7 @@ public class ProductService implements ProductServiceInterface {
                 .map(existingProduct -> updateExistingProduct(existingProduct, request))
                 .map(productRepository::save)
                 .orElseThrow(() -> new ProductNotFoundException("Product not found"));
-    }<
+    }
 
     private Product updateExistingProduct(Product existingProduct, ProductUpdateRequest request) {
         existingProduct.setName(request.getName());
