@@ -1,0 +1,11 @@
+services:
+  db:
+    image: mysql:latest
+    container_name: sample-java-backend-training
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin
+      - MYSQL_DATABASE=sample-spring-backend
+    volumes:
+      - /home/leonick85/Documenti/Projects/sample-spring-training-backend/db:/var/lib/mysql
