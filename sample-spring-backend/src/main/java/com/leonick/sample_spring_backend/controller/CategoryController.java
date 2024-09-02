@@ -25,7 +25,7 @@ public class CategoryController {
             return ResponseEntity.ok(new ApiResponse("OK", categories));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body(new ApiResponse("Error", "Internal Server Error"))
+                    .body(new ApiResponse("Error", "Internal Server Error"));
         }
     }
 
